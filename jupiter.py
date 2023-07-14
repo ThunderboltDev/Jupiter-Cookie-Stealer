@@ -26,7 +26,7 @@ import zipfile
 import threading
 import tempfile
 
-webhook = "https://canary.discord.com/api/webhooks/1128934347433578530/rWM-8YorF8E6tCKgzdMO-RmoMmJOPs53W4myDHbKWmC2cD69Tb_wCsQdk1bdtps7vF0X"
+webhook = "webhook_here"
 
 def is_admin():
     try:
