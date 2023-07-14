@@ -9,6 +9,8 @@ A Really Powerful Roblox Stealer made in PY and obfuscated in AES 256 bit
 5. steals wifi infomation
 6. AES 256 Bit Encoding
 
+## ⚠️DISCLAIMER⚠️
+This program was made for Educational Purposes and any actions you do is your fualt while using this program!
    
 ![](https://gcdnb.pbrd.co/images/WKugQsqT4oOb.jpg?o=1)  ![](https://gcdnb.pbrd.co/images/EhvMZHh5GfMi.jpg?o=1)
 ![](https://gcdnb.pbrd.co/images/aw0TtA9Yp1Gi.jpg?o=1)
